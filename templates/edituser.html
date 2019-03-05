@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Update</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+    p {
+        margin-bottom: 0px;
+        text-align: left;
+    }
+    input {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    form {
+        width: 300px;
+        margin: 0px auto;
+    }
+    .shorten {
+        width: 25%;
+    }
+    .home {
+        display: inline-block;
+        vertical-align: top;
+    }
+    .head {
+        display: block;
+        margin-bottom: 30px;
+    }
+    .pushright {
+        width: 80%;
+        text-align: left;
+        margin: 0px;
+        display: inline-block;
+    }
+    .home {
+        vertical-align: top;
+        text-align: right;
+        margin-top: 10px;
+        margin-left: 90%;
+    }
+</style>
+<body>
+    <a class="home" href="/users">Home</a>
+    <div class="jumbotron-fluid text-center">
+        <h1>Edit User {{user[0]["id"]}}</h1>
+        <div class="add">
+            <form action='/users/{{user[0]["id"]}}/update' method="POST">
+                <p>First Name:</p> 
+                <input type="text" name="fname" placeholder="{{user[0]['first_name']}}">
+                <p>Last Name:</p>
+                <input type="text" name="lname" placeholder="{{user[0]['last_name']}}">
+                <p>Email:</p>
+                <input type="text" name="email" placeholder="{{user[0]['email']}}">
+                </br>
+                <input class="shorten" type="submit" value="Update"></p>
+            </form>
+            <a href="/users/{{user[0]['id']}}">Show User</a>
+        </div>  
+    </div>
+</body>
+</html>

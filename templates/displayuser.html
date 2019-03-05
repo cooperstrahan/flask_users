@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Read (one)</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+    .container {
+        width: 95%;
+        margin: 0px auto;
+    }
+    .head {
+        display: block;
+        margin-bottom: 30px;
+    }
+    .pushright {
+        width: 80%;
+        text-align: left;
+        margin: 0px;
+        display: inline-block;
+    }
+    .home {
+        display: inline-block;
+        vertical-align: top;
+    }
+</style>
+<body>
+    <div class="jumbotron-fluid container">
+        <div class = "head">
+            <h1 class= "pushright">User {{user[0]["id"]}} </h1>
+            <a class="home" href="/users">Home</a>
+        </div>
+        
+        <div class="body">
+            <p>Full Name: {{user[0]["first_name"] + " " + user[0]["last_name"]}}</p>
+            <p>Email: {{user[0]["email"]}}</p>
+            <p>Created On: {{user[0]["created_at"]}}</p>
+            <p>Last Updated: {{user[0]["updated_at"]}}</p>
+        </div>
+        <a href="/users/{{user[0]['id']}}/edit">Edit</a> | <a href="/users/{{user[0]['id']}}/destroy">Delete</a>
+    </div>
+</body>
+</html>

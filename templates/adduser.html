@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Create</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+    p {
+        margin-bottom: 0px;
+        text-align: left;
+    }
+    input {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    form {
+        width: 300px;
+        margin: 0px auto;
+    }
+    .shorten {
+        width: 25%;
+    }
+    h1 {
+        display: inline-block;
+
+    }
+    a {
+        vertical-align: top;
+        text-align: right;
+        margin-top: 10px;
+        margin-left: 90%;
+    }
+</style>
+<body>
+    <a class="home" href="/users">Home</a>
+    <div class="jumbotron-fluid text-center">
+        <h1>Add A New User</h1>
+        <div class="add">
+            <form action="/users/new/process" method="POST">
+                <p>First Name:</p> 
+                <input type="text" name="fname">
+                <p>Last Name:</p>
+                <input type="text" name="lname">
+                <p>Email:</p>
+                <input type="text" name="email">
+                </br>
+                <input class="shorten" type="submit" value="Create"></p>
+            </form>
+        </div>  
+    </div>
+</body>
+</html>
